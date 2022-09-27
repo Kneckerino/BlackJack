@@ -49,8 +49,8 @@
 	"kind" : "codemodel",
 	"paths" : 
 	{
-		"build" : "C:/Users/Bruger/CLionProjects/BlackJack/cmake-build-debug",
-		"source" : "C:/Users/Bruger/CLionProjects/BlackJack"
+		"build" : "C:/Users/mikke/CLionProjects/BlackJack/cmake-build-debug",
+		"source" : "C:/Users/mikke/CLionProjects/BlackJack"
 	},
 	"version" : 
 	{
