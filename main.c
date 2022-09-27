@@ -20,13 +20,15 @@ int IsBlackJack(int hand[], int size);
 int GreatestLegalValue(int hand[], int size);
 
 int main() {
+    FILE *balance = fopen("balance.txt", "r");
+
     srand(time(NULL)); //Initialize Random
     ResetDeck();
     InitCards();
 
-    int turn = 1;
-    int money = 500;
-    int bet;
+    int turn = 1, money, bet;
+
+    fscanf(balance, "%d", &money);
 
     printf("Welcome to BlackJack!\n");
     printf("your total is %d\nHow much do you wager?>", money);
@@ -90,6 +92,12 @@ int main() {
         printf("You (%d) had more points than dealer (%d) and won", playerCardVal, dealerCardVal);
         money += bet * 2;
     }
+    fclose(balance);
+
+    balance = fopen("balance.txt", "w");
+    fprintf(balance, "%d", money);
+
+    fclose(balance);
 }
 
 int IsBlackJack(int hand[], int size) {
